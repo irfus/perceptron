@@ -1,0 +1,3 @@
+* LING 590 hw01
+
+Implementation of a single cell perceptron as described in the hw requirements. See file:./perceptron.org for details.

@@ -1,0 +1,66 @@
+* Implementation Here
+** Data
+In this section, we define data blocks supplying the boolean function truth tables. In these tables, the final column is the output and the preceding ones the input values. The loader for the Iris data set will also be defined here when completed.
+
+#+name: and-data
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+
+#+name: or-data
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
+
+
+** Train
+Here we have the training part of the program
+
+#+name: train
+#+BEGIN_SRC python :results output org drawer
+def train():
+    return ni
+#+END_SRC
+
+#+BEGIN_SRC python :results output org drawer
+
+class Model:
+    def __init__(self, numIters = 100, learnRate = 1, infile="iris.csv"):
+        self.numIters = numIters
+        self.learnRate = learnRate
+        with open(infile, 'r') as f:
+            data = f.read().split('\n')
+            data = [row.split(',') for row in data]
+            self.inputs = [[float(x) for x in row[0:-1]] for row in data]
+            self.outputs = [row[-1] for row in data]
+            self.numInputs = len(self.inputs[0])
+            self.weights = [0.0 for x in range(self.numInputs)]
+            self.error = 
+
+    def predict(x_i, theta = 1):
+        y = sum([x * w for x, w in zip(x_i, self.weights)])
+        if y >= theta:
+            return 1
+        else:
+            return 0
+    # LR: 
+    def getError():
+        pass
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+:END:
+
+** Test
