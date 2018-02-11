@@ -1,14 +1,13 @@
-import numpy as np
+import sys
 from perceptron import Perceptron
-from matplotlib import pyplot as plt
 
-%matplotlib inline
+if __name__ == "__main__":
+    iters = int(sys.argv[1])
+    lr = float(sys.argv[2])
+    with open(sys.argv[3]) as f:
+        data = f.read().split('\n')
+        data = [row.split('\t') for row in data]
+    model = Perceptron(data)
 
-model = Perceptron(data)
-print(model, "\n")
-model.fit(numIters = 100)
-plt.plot(model.fitHistory)
-plt.xlabel("Iterations")
-plt.ylabel("Error")
-
-print(model)
+    model.fit(lr, iters, True)
+    print("\t".join(map(str, model.bestWeights)), file=sys.stdout)
