@@ -1,3 +1,6 @@
 * LING 590 hw01
 
-Implementation of a single cell perceptron as described in the hw requirements. See file:./perceptron.org for details.
+Implementation of a single cell perceptron as described in the hw requirements. See file:./perceptron.org for details and code.
+
+train.py usage: ~python3 train.py <number of iterations> <learning-rate> <input-file.tsv>~
+test.py usage: ~python3 test.py <input-file.tsv> <W1\tW2\t...Wn>~
