@@ -508,10 +508,8 @@ print("#+CAPTION: Training on the Iris 'linear' dataset", end='')
 #+END_SRC
 
 #+RESULTS: plot-iris-linear
-#+BEGIN_EXAMPLE
 #+NAME: fig-4
-#+CAPTION: Training on the Iris 'linear' dataset#+END_EXAMPLE
-
+#+CAPTION: Training on the Iris 'linear' dataset
 [[file:ipython-inline-images/ob-ipython-4651108eb17349d8601089953e8ef051.png]]
 
 
