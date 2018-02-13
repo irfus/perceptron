@@ -1,0 +1,7 @@
+*pycache*
+*.bak
+*.log
+*.bbl
+*.out
+*.aux
+*tmp*

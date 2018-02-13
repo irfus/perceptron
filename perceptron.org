@@ -424,7 +424,7 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 model = Perceptron(data)
-model.fit(lr = 1, numIters = 1000)
+model.fit(lr = 0.5, numIters = 1000)
 plt.plot(model.fitHistory)
 plt.xlabel("Iterations")
 plt.ylabel("Error")
@@ -435,7 +435,7 @@ print('#+CAPTION: Learning the AND function', end='')
 #+RESULTS: plot-and
 #+NAME: fig-1
 #+CAPTION: Learning the AND function
-[[file:ipython-inline-images/ob-ipython-25e4eacca27ef459c86105b99cb9ffe9.png]]
+[[file:ipython-inline-images/ob-ipython-8d732c9879226ae9c7e4c80e161e8764.png]]
 
 
 #+name: plot-or
@@ -449,7 +449,7 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 model = Perceptron(data)
-model.fit(lr = .0001, numIters = 1000)
+model.fit(lr = .5, numIters = 1000)
 plt.plot(model.fitHistory)
 plt.xlabel("Iterations")
 plt.ylabel("Error")
@@ -460,7 +460,7 @@ print('#+CAPTION: Learning the OR function', end='')
 #+RESULTS: plot-or
 #+NAME: fig-2
 #+CAPTION: Learning the OR function
-[[file:ipython-inline-images/ob-ipython-11a383b697a09fe87a69158ab732c17d.png]]
+[[file:ipython-inline-images/ob-ipython-6b49594bc3f281d46f9563e9d2bd8c58.png]]
 
 
 #+name: plot-xor
@@ -474,7 +474,7 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 model = Perceptron(data)
-model.fit(lr = 1, numIters = 1000)
+model.fit(lr = 0.5, numIters = 1000)
 plt.plot(model.fitHistory)
 plt.xlabel("Iterations")
 plt.ylabel("Error")
@@ -485,7 +485,8 @@ print('#+CAPTION: Learning the XOR function', end='')
 #+RESULTS: plot-xor
 #+NAME: fig-3
 #+CAPTION: Learning the XOR function
-[[file:ipython-inline-images/ob-ipython-1298f744cb7b690d1dc278acd881bc1b.png]]
+[[file:ipython-inline-images/ob-ipython-399086004ebd7aaba2f750d7d4a0be86.png]]
+
 
 #+name: plot-iris-linear
 #+BEGIN_SRC ipython :results raw :ob-ipython-results image/png :exports results :var data = iris-linear
@@ -498,7 +499,7 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 model = Perceptron(data)
-model.fit(lr = 1, numIters = 1000)
+model.fit(lr = 0.01, numIters = 1000)
 plt.plot(model.fitHistory)
 plt.xlabel("Iterations")
 plt.ylabel("Error")
@@ -507,9 +508,12 @@ print("#+CAPTION: Training on the Iris 'linear' dataset", end='')
 #+END_SRC
 
 #+RESULTS: plot-iris-linear
+#+BEGIN_EXAMPLE
 #+NAME: fig-4
-#+CAPTION: Training on the Iris 'linear' dataset
-[[file:ipython-inline-images/ob-ipython-ba894552f333d60211347aa89aee74ab.png]]
+#+CAPTION: Training on the Iris 'linear' dataset#+END_EXAMPLE
+
+[[file:ipython-inline-images/ob-ipython-4651108eb17349d8601089953e8ef051.png]]
+
 
 #+name: plot-iris-non-linear
 #+BEGIN_SRC ipython :results raw :ob-ipython-results image/png :exports results :var data = iris-nonlinear
@@ -522,7 +526,7 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 model = Perceptron(data)
-model.fit(lr = 1, numIters = 1000)
+model.fit(lr = 0.01, numIters = 1000)
 plt.plot(model.fitHistory)
 plt.xlabel("Iterations")
 plt.ylabel("Error")
@@ -533,10 +537,10 @@ print("#+CAPTION: Training on the Iris 'non-linear' data", end='')
 #+RESULTS: plot-iris-non-linear
 #+NAME: fig-5
 #+CAPTION: Training on the Iris 'non-linear' data
-[[file:ipython-inline-images/ob-ipython-7243bc05735719ddc5df13c0e560cfb4.png]]
+[[file:ipython-inline-images/ob-ipython-b07496e3f8b25a52a30e255ac7cff196.png]]
 
 
-We can see through these plots that our perceptron model is able to quickly converge on the three linearly separable datasets, namely the AND/OR function tables, and the linearly separable classes of the Iris data (Cref:fig-1,fig-2,fig-4). However, the model fails to train successfully on the XOR function data or the non-linearly separable classes of the Iris data (Cref:fig-3,fig-5) even after training for 1000 iterations. Clearly, a simple perceptron model is only able to function as a linear classifier.
+We can conclude from these plots that our perceptron model is able to quickly converge on the three linearly separable datasets, namely the AND/OR function tables, and the linearly separable classes of the Iris data (Cref:fig-1,fig-2,fig-4). However, the model fails to train successfully on the XOR function data or the non-linearly separable classes of the Iris data (Cref:fig-3,fig-5) even after training for 1000 iterations. Clearly, a simple perceptron model is only able to function as a linear classifier.
 
 bibliography:perceptron.bib
 bibliographystyle:acl
